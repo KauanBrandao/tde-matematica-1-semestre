@@ -23,7 +23,6 @@ def index():
         x = [v0x * t for t in tempos]
         y = [y0 + v0y * t - 0.5 * g * t**2 for t in tempos]
 
-        # Gerar gráfico
         plt.figure(figsize=(10, 5))
         plt.plot(x, y, color='green')
         plt.title('Trajetória do Lançamento Oblíquo')
@@ -32,7 +31,7 @@ def index():
         plt.grid(True)
         plt.ylim(bottom=0)
 
-        # Salvar gráfico
+
         caminho = os.path.join('static', 'trajeto.png')
         plt.savefig(caminho)
         plt.close()
