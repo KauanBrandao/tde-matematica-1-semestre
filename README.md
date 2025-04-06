@@ -1,1 +1,0 @@
-# tde-matematica-1-semestre
