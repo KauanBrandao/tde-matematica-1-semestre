@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lançamento Oblíquo</title>
+</head>
+<body>
+    <h1>Simulador de Lançamento Oblíquo</h1>
+    <form method="POST">
+        <label>Velocidade inicial (m/s):</label>
+        <input type="number" name="v0" step="0.1" required><br><br>
+
+        <label>Ângulo (graus):</label>
+        <input type="number" name="angulo" step="0.1" required><br><br>
+
+        <label>Altura inicial (m):</label>
+        <input type="number" name="y0" step="0.1" required><br><br>
+
+        <button type="submit">Gerar Trajetória</button>
+    </form>
+
+    {% if imagem %}
+        <h2>Resultado:</h2>
+        <img src="{{ imagem }}" alt="Gráfico da Trajetória">
+    {% endif %}
+</body>
+</html>
